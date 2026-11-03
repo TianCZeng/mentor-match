@@ -1,0 +1,10 @@
+source_version: "2026-09-22"
+
+institutions:
+  - name: "Example State University"
+    country: "Examplestan"
+    aliases: ["ESU"]
+    official_domains: ["example.edu"]
+    ror_id: "01abcde23"
+    source: edunexus-seed
+    retrieved_at: "2026-09-22"

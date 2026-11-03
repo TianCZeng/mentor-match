@@ -1,0 +1,28 @@
+fellowship_id: example-institute-research-fellowship
+name: Example Institute Research Fellowship
+host_institution: Example Institute
+official_url: https://www.example.edu/fellowships/research-fellowship
+retrieved_at: '2026-09-22'
+host_requirement: optional
+host_relationship_term: mentor
+host_lists:
+  - name: Institute Faculty
+    official_url: https://www.example.edu/people/faculty
+    retrieved_at: '2026-09-22'
+    bounds_pool: false
+    note: >-
+      The eligibility rule also admits faculty elsewhere in the university who
+      work on the named subjects, and none of those appear on this list.
+host_rules:
+  - rule: The applicant names two to three proposed mentors in the application.
+    quote: Candidates will be asked to provide the names of two to three proposed mentors.
+    official_url: https://www.example.edu/fellowships/research-fellowship
+    retrieved_at: '2026-09-22'
+  - rule: No prior agreement with a proposed mentor is needed before applying.
+    quote: Candidates do not need to have established a relationship with proposed mentors in advance.
+    official_url: https://www.example.edu/fellowships/research-fellowship
+    retrieved_at: '2026-09-22'
+  - rule: A mentor is on the Institute's faculty, or works on learning and memory anywhere in the university.
+    quote: Proposed mentors may be members of the Institute faculty or faculty across the university whose research addresses learning and memory.
+    official_url: https://www.example.edu/fellowships/research-fellowship/eligibility
+    retrieved_at: '2026-09-22'

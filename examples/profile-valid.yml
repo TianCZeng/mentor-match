@@ -1,0 +1,28 @@
+applicant_id: example-applicant
+career_stage: final-year PhD
+field: computational neuroscience
+current_position: PhD candidate, Department of Example Studies
+current_institution: Example State University
+country_of_work: Examplestan
+degrees:
+  - degree: PhD
+    subject: Computational Neuroscience
+    institution: Example State University
+    status: in progress
+    expected: '2027'
+  - degree: BSc
+    subject: Physics
+    institution: Example State University
+    status: awarded
+    awarded: '2021'
+publications:
+  - title: An example model of an example circuit
+    venue: Journal of Example Results
+    year: '2025'
+    authorship: first
+    status: published
+    identifier: 10.0000/example.2025.00001
+methods:
+  - spiking network models
+constraints:
+  earliest_start: '2027-09'

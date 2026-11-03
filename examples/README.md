@@ -1,0 +1,11 @@
+# Fixtures
+
+Fictional files that exist to be checked: one valid file per kind `validate` understands, and a second only where a valid shape shares nothing with the first (the Chinese brief, the seed half of the institution registry). Each invalid case is not a file. It is its valid file with one thing changed, written in `scripts/verify/validate.js` as the edit beside the field `validate` must name, so the change and its assertion are read together: a rule that stops firing, or starts naming a different field, fails there rather than in an applicant's workspace. An edit that stops matching its file fails too, rather than quietly testing the valid one.
+
+A report is two files, as in a workspace, but side by side here: `pool-valid.md` and its machine record `pool-valid.yml`, and so on for the summaries and the recommendation. The invalid cases edit the record, which is what `validate` reads; the report is checked once, as committed, through the record beside it.
+
+Nothing here is a person. `researchers-valid.yml` and the three report pairs are shaped like researcher rows, a pool, a summaries report and a recommendation, and every person in them is invented: each URL and each address in them, and in every edit made to them, sits under an `example.*` host, and `verify:validate` fails on any other, so a real person cannot be pasted in without breaking the build. A real row cites a real page, which is what the pin catches. `registry/researchers.example.yml` stays forbidden: a shipped example beside the real file is where a real row would be copied from (`AGENTS.md` → Personal Data).
+
+`containment-link-outside` is a committed link to `/dev/null`. It sits inside the tree as written and outside it once followed, which is the one shape of path a guard could otherwise be handed from outside the repository; `containment-cases.json` lists it among the paths every command must refuse.
+
+Institutions, units, universities and fellowships named here are invented, and the setup template under `fellowships/` is the same fellowship as `fellowship-valid.yml`. The `.edu` addresses are chosen so the gate admits them on the restricted-registry rule without any registry row, which keeps the fixtures independent of the seed.

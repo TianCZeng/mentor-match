@@ -1,0 +1,41 @@
+# Example only. Copy to config.yml (gitignored) and edit.
+# Every key here is user-layer configuration; the repository never writes it.
+#
+# There is no key naming another repository, and there will not be. The
+# fellowship's host rules are recorded here, in this repository's own user
+# layer, and nothing outside this repository root is read or written.
+# See AGENTS.md -> Standalone.
+
+# Used when --applicant is omitted and more than one workspace exists under
+# applicants/. With exactly one workspace the flag is never needed.
+default_applicant: null
+
+# Per-run caps each mode that reads the web must stay under and report
+# against. Distinct URLs are counted, not fetches; a retry of a URL already
+# opened is not counted again.
+#
+# Measured on 2026-09-23, on this tool's first real run: one complete list
+# run for one fellowship -- three published host lists holding 79 people, four
+# units -- took 110 page opens and 10 web searches. 32 of the opens were a
+# second or alternate page for the same person: 16 pages would not open at all,
+# and what a person works on is often on a page other than the first. The
+# opens cap is that count with some slack. Searches were low because the
+# published lists supplied most URLs; a fellowship with no list needs about one
+# search per unit, so the searches cap is twice the count.
+#
+# bibliographic_fetches_per_run counts requests to a bibliographic source --
+# a publication record read by its identifier, or an index query that lists
+# records -- which the summarize mode makes. Measured on 2026-09-24, on the
+# summarize mode's first real run: 20 host candidates took 46 fetches --
+# 23 author searches, three of them a name re-searched in a fuller form, 20
+# works queries and 3 records for venues the index lacked -- about 2.3 per host
+# candidate. The cap is that count with about 30% slack, because a summarize
+# run is as large as its pool, which grows between runs.
+budgets:
+  web_searches_per_run: 20
+  page_opens_per_run: 120
+  bibliographic_fetches_per_run: 60
+
+# How far back the summarize mode reads a host candidate's record: this many
+# calendar years before the current one, and the current one.
+publication_window_years: 5

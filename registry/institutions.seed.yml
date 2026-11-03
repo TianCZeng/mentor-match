@@ -1,0 +1,887 @@
+# Institution registry: the seeded half. Identity and official domains only --
+# this file says where to look, never what anyone does (AGENTS.md principle 1).
+# It holds no people: a row here is a public fact about an organisation, which
+# is the whole reason this registry has a seed and the researcher registry
+# never will (AGENTS.md -> Personal Data).
+#
+# Where the rows come from. 67 rows, labelled `edunexus-seed`, join two EduNexus
+# data files (Apache-2.0; see NOTICE) on ror_id: the ROR canonical name is the
+# row's name, because the ROR id is what makes it citable, and the domain
+# file's own name is kept in aliases where the two differ. 41 rows, labelled
+# `maintainer-run`, were confirmed by hand: five Netherlands rows read on a real
+# run, and 36 rows across Belgium, Denmark, Finland, France, Germany, the
+# Netherlands, Sweden and Switzerland built from the Research Organization
+# Registry (https://ror.org, CC0) after an HTTPS read of every domain returned
+# 2xx on a page naming the institution. The same run added one domain to the
+# Southampton row. Sorted by country then name. 108 rows.
+#
+# Runs never write here. A row a run confirms is appended to the gitignored
+# registry/institutions.yml, and both files are read as one list
+# (DATA_CONTRACT.md -> One Registry Ships A Seed).
+source_version: "2026-09-16"
+
+institutions:
+  - name: "Australian National University"
+    country: "Australia"
+    aliases: ["ANU", "The Australian National University"]
+    official_domains: ["anu.edu.au"]
+    ror_id: "019wvm592"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Monash University"
+    country: "Australia"
+    aliases: []
+    official_domains: ["monash.edu"]
+    ror_id: "02bfwt286"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "RMIT University"
+    country: "Australia"
+    aliases: ["Royal Melbourne Institute of Technology University"]
+    official_domains: ["rmit.edu.au"]
+    ror_id: "04ttjf776"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "The University of Melbourne"
+    country: "Australia"
+    aliases: ["University of Melbourne"]
+    official_domains: ["unimelb.edu.au"]
+    ror_id: "01ej9dk98"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "The University of Queensland"
+    country: "Australia"
+    aliases: ["University of Queensland"]
+    official_domains: ["uq.edu.au"]
+    ror_id: "00rqy9422"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "The University of Sydney"
+    country: "Australia"
+    aliases: ["University of Sydney"]
+    official_domains: ["sydney.edu.au"]
+    ror_id: "0384j8v12"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "UNSW Sydney"
+    country: "Australia"
+    aliases: ["University of New South Wales", "UNSW"]
+    official_domains: ["unsw.edu.au"]
+    ror_id: "03r8z3t63"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Ghent University"
+    country: "Belgium"
+    aliases: ["Universiteit Gent", "Université de Gand"]
+    official_domains: ["ugent.be"]
+    ror_id: "00cv9y106"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "KU Leuven"
+    country: "Belgium"
+    aliases: ["KUL", "Katholieke Universiteit Leuven"]
+    official_domains: ["kuleuven.be"]
+    ror_id: "05f950310"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "UCLouvain"
+    country: "Belgium"
+    aliases: ["Catholic University of Louvain"]
+    official_domains: ["uclouvain.be"]
+    ror_id: "02495e989"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "Vrije Universiteit Brussel"
+    country: "Belgium"
+    aliases: ["VUB"]
+    official_domains: ["vub.be", "vub.ac.be"]
+    ror_id: "006e5kg04"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "McGill University"
+    country: "Canada"
+    aliases: []
+    official_domains: ["mcgill.ca"]
+    ror_id: "01pxwe438"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "McMaster University"
+    country: "Canada"
+    aliases: []
+    official_domains: ["mcmaster.ca"]
+    ror_id: "02fa3aq29"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Simon Fraser University"
+    country: "Canada"
+    aliases: ["SFU"]
+    official_domains: ["sfu.ca"]
+    ror_id: "0213rcc28"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of Alberta"
+    country: "Canada"
+    aliases: ["UAlberta"]
+    official_domains: ["ualberta.ca"]
+    ror_id: "0160cpw27"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of British Columbia"
+    country: "Canada"
+    aliases: ["UBC"]
+    official_domains: ["ubc.ca"]
+    ror_id: "03rmrcq20"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of Ottawa"
+    country: "Canada"
+    aliases: ["uOttawa"]
+    official_domains: ["uottawa.ca"]
+    ror_id: "03c4mmv16"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of Toronto"
+    country: "Canada"
+    aliases: ["U of T"]
+    official_domains: ["utoronto.ca", "toronto.edu"]
+    ror_id: "03dbr7087"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Université de Montréal"
+    country: "Canada"
+    aliases: ["University of Montreal", "UdeM"]
+    official_domains: ["umontreal.ca"]
+    ror_id: "0161xgx34"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Tsinghua University"
+    country: "China"
+    aliases: []
+    official_domains: ["tsinghua.edu.cn"]
+    ror_id: "03cve4549"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Aalborg University"
+    country: "Denmark"
+    aliases: ["AAU", "Aalborg Universitet"]
+    official_domains: ["aau.dk"]
+    ror_id: "04m5j1k67"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "Aarhus University"
+    country: "Denmark"
+    aliases: ["AU", "Aarhus Universitet"]
+    official_domains: ["au.dk"]
+    ror_id: "01aj84f44"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "Technical University of Denmark"
+    country: "Denmark"
+    aliases: ["DTU", "Danmarks Tekniske Universitet"]
+    official_domains: ["dtu.dk"]
+    ror_id: "04qtj9h94"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "University of Copenhagen"
+    country: "Denmark"
+    aliases: ["UCPH", "Københavns Universitet"]
+    official_domains: ["ku.dk"]
+    ror_id: "035b05819"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "Aalto University"
+    country: "Finland"
+    aliases: ["Aalto-yliopisto"]
+    official_domains: ["aalto.fi"]
+    ror_id: "020hwjq30"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "Tampere University"
+    country: "Finland"
+    aliases: ["Tampereen Yliopisto"]
+    official_domains: ["tuni.fi"]
+    ror_id: "033003e23"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "University of Helsinki"
+    country: "Finland"
+    aliases: ["UH", "Helsingfors Universitet", "Helsingin Yliopisto"]
+    official_domains: ["helsinki.fi"]
+    ror_id: "040af2s02"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "Sorbonne Université"
+    country: "France"
+    aliases: ["Sorbonne University"]
+    official_domains: ["sorbonne-universite.fr"]
+    ror_id: "02en5vm52"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "Télécom Paris"
+    country: "France"
+    aliases: ["ENST", "TP"]
+    official_domains: ["telecom-paris.fr"]
+    ror_id: "01naq7912"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "Université Grenoble Alpes"
+    country: "France"
+    aliases: ["UGA", "Grenoble Alpes University"]
+    official_domains: ["univ-grenoble-alpes.fr"]
+    ror_id: "02rx3b187"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "Université Paris Sciences et Lettres"
+    country: "France"
+    aliases: ["PSL"]
+    official_domains: ["psl.eu"]
+    ror_id: "013cjyk83"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "Université Paris-Saclay"
+    country: "France"
+    aliases: ["University of Paris-Saclay"]
+    official_domains: ["universite-paris-saclay.fr"]
+    ror_id: "03xjwb503"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "Karlsruhe Institute of Technology"
+    country: "Germany"
+    aliases: ["KIT"]
+    official_domains: ["kit.edu"]
+    ror_id: "04t3en479"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Ludwig-Maximilians-Universität München"
+    country: "Germany"
+    aliases: ["LMU"]
+    official_domains: ["lmu.de"]
+    ror_id: "05591te55"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "RWTH Aachen University"
+    country: "Germany"
+    aliases: ["RWTH Aachen", "Rheinisch-Westfälische Technische Hochschule Aachen"]
+    official_domains: ["rwth-aachen.de"]
+    ror_id: "04xfq0f34"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Saarland University"
+    country: "Germany"
+    aliases: ["Universität des Saarlandes"]
+    official_domains: ["uni-saarland.de"]
+    ror_id: "01jdpyv68"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "Technical University of Munich"
+    country: "Germany"
+    aliases: ["TUM", "TU Munich", "Technische Universität München"]
+    official_domains: ["tum.de"]
+    ror_id: "02kkvpp62"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Technische Universität Berlin"
+    country: "Germany"
+    aliases: ["TUB"]
+    official_domains: ["tu-berlin.de", "tu.berlin"]
+    ror_id: "03v4gjf40"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "Technische Universität Darmstadt"
+    country: "Germany"
+    aliases: ["Technical University of Darmstadt"]
+    official_domains: ["tu-darmstadt.de"]
+    ror_id: "05n911h24"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "University of Bonn"
+    country: "Germany"
+    aliases: ["Rheinische Friedrich-Wilhelms-Universität Bonn"]
+    official_domains: ["uni-bonn.de"]
+    ror_id: "041nas322"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "University of Freiburg"
+    country: "Germany"
+    aliases: ["Albert-Ludwigs-Universität Freiburg"]
+    official_domains: ["uni-freiburg.de"]
+    ror_id: "0245cg223"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "University of Stuttgart"
+    country: "Germany"
+    aliases: ["Universität Stuttgart"]
+    official_domains: ["uni-stuttgart.de"]
+    ror_id: "04vnq7t77"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "University of Tübingen"
+    country: "Germany"
+    aliases: ["Eberhard Karls Universität Tübingen"]
+    official_domains: ["uni-tuebingen.de"]
+    ror_id: "03a1kwz48"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "Delft University of Technology"
+    country: "Netherlands"
+    aliases: ["TU Delft", "Technische Universiteit Delft"]
+    official_domains: ["tudelft.nl"]
+    ror_id: null
+    source: maintainer-run
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Eindhoven University of Technology"
+    country: "Netherlands"
+    aliases: ["TU/e", "Technische Universiteit Eindhoven"]
+    official_domains: ["tue.nl"]
+    ror_id: "02c2kyt77"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "Leiden University"
+    country: "Netherlands"
+    aliases: ["Universiteit Leiden"]
+    official_domains: ["leidenuniv.nl", "universiteitleiden.nl"]
+    ror_id: "027bh9e22"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "Maastricht University"
+    country: "Netherlands"
+    aliases: ["UM", "Universiteit Maastricht"]
+    official_domains: ["maastrichtuniversity.nl"]
+    ror_id: "02jz4aj89"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "Radboud University Nijmegen"
+    country: "Netherlands"
+    aliases: ["Radboud Universiteit Nijmegen"]
+    official_domains: ["ru.nl"]
+    ror_id: "016xsfp80"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "University of Amsterdam"
+    country: "Netherlands"
+    aliases: ["UvA", "Universiteit van Amsterdam"]
+    official_domains: ["uva.nl"]
+    ror_id: null
+    source: maintainer-run
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of Groningen"
+    country: "Netherlands"
+    aliases: ["RUG", "Rijksuniversiteit Groningen"]
+    official_domains: ["rug.nl"]
+    ror_id: null
+    source: maintainer-run
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of Twente"
+    country: "Netherlands"
+    aliases: ["Universiteit Twente"]
+    official_domains: ["utwente.nl"]
+    ror_id: "006hf6230"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "Utrecht University"
+    country: "Netherlands"
+    aliases: ["UU", "Universiteit Utrecht"]
+    official_domains: ["uu.nl"]
+    ror_id: null
+    source: maintainer-run
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Vrije Universiteit Amsterdam"
+    country: "Netherlands"
+    aliases: ["VU Amsterdam", "VU"]
+    official_domains: ["vu.nl"]
+    ror_id: null
+    source: maintainer-run
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Nanyang Technological University"
+    country: "Singapore"
+    aliases: ["NTU", "NTU Singapore"]
+    official_domains: ["ntu.edu.sg"]
+    ror_id: "02e7b5302"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "National University of Singapore"
+    country: "Singapore"
+    aliases: ["NUS"]
+    official_domains: ["nus.edu.sg"]
+    ror_id: "01tgyzw49"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Chalmers University of Technology"
+    country: "Sweden"
+    aliases: ["Chalmers tekniska högskola"]
+    official_domains: ["chalmers.se"]
+    ror_id: "040wg7k59"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "KTH Royal Institute of Technology"
+    country: "Sweden"
+    aliases: ["KTH", "Kungliga Tekniska högskolan"]
+    official_domains: ["kth.se"]
+    ror_id: "026vcq606"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "Linköping University"
+    country: "Sweden"
+    aliases: ["LiU", "Linköpings Universitet"]
+    official_domains: ["liu.se"]
+    ror_id: "05ynxx418"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "Lund University"
+    country: "Sweden"
+    aliases: ["Lunds universitet"]
+    official_domains: ["lu.se"]
+    ror_id: "012a77v79"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "Uppsala University"
+    country: "Sweden"
+    aliases: ["Uppsala universitet"]
+    official_domains: ["uu.se"]
+    ror_id: "048a87296"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "ETH Zurich"
+    country: "Switzerland"
+    aliases: ["ETHZ", "Swiss Federal Institute of Technology Zurich", "Eidgenössische Technische Hochschule Zürich"]
+    official_domains: ["ethz.ch"]
+    ror_id: "05a28rw58"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of Zurich"
+    country: "Switzerland"
+    aliases: ["UZH", "Università di Zurigo", "Universität Zürich", "Université de Zurich"]
+    official_domains: ["uzh.ch"]
+    ror_id: "02crff812"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "Università della Svizzera italiana"
+    country: "Switzerland"
+    aliases: ["USI"]
+    official_domains: ["usi.ch"]
+    ror_id: "03c4atk17"
+    source: maintainer-run
+    retrieved_at: "2026-09-16"
+    confirmed_by: null
+  - name: "École Polytechnique Fédérale de Lausanne"
+    country: "Switzerland"
+    aliases: ["EPFL", "Ecole Polytechnique Federale de Lausanne", "Swiss Federal Institute of Technology Lausanne"]
+    official_domains: ["epfl.ch"]
+    ror_id: "02s376052"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Imperial College London"
+    country: "United Kingdom"
+    aliases: ["Imperial College"]
+    official_domains: ["imperial.ac.uk"]
+    ror_id: "041kmwe10"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University College London"
+    country: "United Kingdom"
+    aliases: ["UCL"]
+    official_domains: ["ucl.ac.uk"]
+    ror_id: "02jx3x895"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of Bath"
+    country: "United Kingdom"
+    aliases: ["Bath University"]
+    official_domains: ["bath.ac.uk"]
+    ror_id: "002h8g185"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of Cambridge"
+    country: "United Kingdom"
+    aliases: ["Cambridge University"]
+    official_domains: ["cam.ac.uk"]
+    ror_id: "013meh722"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of Edinburgh"
+    country: "United Kingdom"
+    aliases: ["Edinburgh University"]
+    official_domains: ["ed.ac.uk"]
+    ror_id: "01nrxwf90"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of Glasgow"
+    country: "United Kingdom"
+    aliases: ["Glasgow University"]
+    official_domains: ["gla.ac.uk"]
+    ror_id: "00vtgdb53"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of Manchester"
+    country: "United Kingdom"
+    aliases: ["The University of Manchester"]
+    official_domains: ["manchester.ac.uk"]
+    ror_id: "027m9bs27"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of Oxford"
+    country: "United Kingdom"
+    aliases: ["Oxford University"]
+    official_domains: ["ox.ac.uk"]
+    ror_id: "052gg0110"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of Sheffield"
+    country: "United Kingdom"
+    aliases: ["The University of Sheffield"]
+    official_domains: ["sheffield.ac.uk"]
+    ror_id: "05krs5044"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of Southampton"
+    country: "United Kingdom"
+    aliases: ["Southampton University"]
+    official_domains: ["soton.ac.uk", "southampton.ac.uk"]
+    ror_id: "01ryk1543"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of Warwick"
+    country: "United Kingdom"
+    aliases: ["Warwick University", "The University of Warwick"]
+    official_domains: ["warwick.ac.uk"]
+    ror_id: "01a77tt86"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Boston University"
+    country: "United States"
+    aliases: ["BU"]
+    official_domains: ["bu.edu"]
+    ror_id: "05qwgg493"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "California Institute of Technology"
+    country: "United States"
+    aliases: ["Caltech"]
+    official_domains: ["caltech.edu"]
+    ror_id: "05dxps055"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Carnegie Mellon University"
+    country: "United States"
+    aliases: ["CMU"]
+    official_domains: ["cmu.edu"]
+    ror_id: "05x2bcf33"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Columbia University"
+    country: "United States"
+    aliases: ["Columbia University in the City of New York"]
+    official_domains: ["columbia.edu"]
+    ror_id: "00hj8s172"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Cornell University"
+    country: "United States"
+    aliases: []
+    official_domains: ["cornell.edu"]
+    ror_id: "05bnh6r87"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Duke University"
+    country: "United States"
+    aliases: []
+    official_domains: ["duke.edu"]
+    ror_id: "00py81415"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Georgia Institute of Technology"
+    country: "United States"
+    aliases: ["Georgia Tech"]
+    official_domains: ["gatech.edu"]
+    ror_id: "01zkghx44"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Massachusetts Institute of Technology"
+    country: "United States"
+    aliases: ["MIT"]
+    official_domains: ["mit.edu"]
+    ror_id: "042nb2s44"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "New York University"
+    country: "United States"
+    aliases: ["NYU"]
+    official_domains: ["nyu.edu"]
+    ror_id: "0190ak572"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Northeastern University"
+    country: "United States"
+    aliases: []
+    official_domains: ["northeastern.edu"]
+    ror_id: "04t5xt781"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Northwestern University"
+    country: "United States"
+    aliases: []
+    official_domains: ["northwestern.edu"]
+    ror_id: "000e0be47"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Pennsylvania State University"
+    country: "United States"
+    aliases: ["Penn State", "The Pennsylvania State University", "Penn State University"]
+    official_domains: ["psu.edu"]
+    ror_id: "04p491231"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Princeton University"
+    country: "United States"
+    aliases: []
+    official_domains: ["princeton.edu"]
+    ror_id: "00hx57361"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Purdue University West Lafayette"
+    country: "United States"
+    aliases: ["Purdue University"]
+    official_domains: ["purdue.edu"]
+    ror_id: "02dqehb95"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Rice University"
+    country: "United States"
+    aliases: ["William Marsh Rice University"]
+    official_domains: ["rice.edu"]
+    ror_id: "008zs3103"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Rutgers, The State University of New Jersey"
+    country: "United States"
+    aliases: ["Rutgers University", "Rutgers University-New Brunswick", "Rutgers"]
+    official_domains: ["rutgers.edu"]
+    ror_id: "05vt9qd57"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Stanford University"
+    country: "United States"
+    aliases: []
+    official_domains: ["stanford.edu"]
+    ror_id: "00f54p054"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "Stony Brook University"
+    country: "United States"
+    aliases: ["SUNY at Stony Brook", "Stony Brook University, State University of New York"]
+    official_domains: ["stonybrook.edu"]
+    ror_id: "05qghxh33"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "The University of Texas at Austin"
+    country: "United States"
+    aliases: ["University of Texas at Austin", "UT Austin"]
+    official_domains: ["utexas.edu"]
+    ror_id: "00hj54h04"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of California San Diego"
+    country: "United States"
+    aliases: ["University of California, San Diego", "UCSD", "UC San Diego"]
+    official_domains: ["ucsd.edu"]
+    ror_id: "0168r3w48"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of California, Berkeley"
+    country: "United States"
+    aliases: ["UC Berkeley", "Berkeley"]
+    official_domains: ["berkeley.edu"]
+    ror_id: "01an7q238"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of California, Davis"
+    country: "United States"
+    aliases: ["UC Davis"]
+    official_domains: ["ucdavis.edu"]
+    ror_id: "05rrcem69"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of California, Los Angeles"
+    country: "United States"
+    aliases: ["UCLA"]
+    official_domains: ["ucla.edu"]
+    ror_id: "046rm7j60"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of Chicago"
+    country: "United States"
+    aliases: ["UChicago"]
+    official_domains: ["uchicago.edu"]
+    ror_id: "024mw5h28"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of Illinois Urbana-Champaign"
+    country: "United States"
+    aliases: ["UIUC", "University of Illinois at Urbana-Champaign"]
+    official_domains: ["illinois.edu"]
+    ror_id: "047426m28"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of Maryland, College Park"
+    country: "United States"
+    aliases: ["UMD", "University of Maryland", "Maryland"]
+    official_domains: ["umd.edu"]
+    ror_id: "047s2c258"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of Massachusetts Amherst"
+    country: "United States"
+    aliases: ["UMass Amherst", "University of Massachusetts at Amherst"]
+    official_domains: ["umass.edu"]
+    ror_id: "0072zz521"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of Michigan"
+    country: "United States"
+    aliases: ["University of Michigan-Ann Arbor", "U-M"]
+    official_domains: ["umich.edu"]
+    ror_id: "00jmfr291"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of Pennsylvania"
+    country: "United States"
+    aliases: ["UPenn"]
+    official_domains: ["upenn.edu"]
+    ror_id: "00b30xv10"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of Pittsburgh"
+    country: "United States"
+    aliases: ["Pitt"]
+    official_domains: ["pitt.edu"]
+    ror_id: "01an3r305"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of South Carolina"
+    country: "United States"
+    aliases: []
+    official_domains: ["sc.edu"]
+    ror_id: "02b6qw903"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of Southern California"
+    country: "United States"
+    aliases: []
+    official_domains: ["usc.edu"]
+    ror_id: "03taz7m60"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null
+  - name: "University of Washington"
+    country: "United States"
+    aliases: ["UW Seattle", "University of Washington Seattle"]
+    official_domains: ["washington.edu"]
+    ror_id: "00cvxb145"
+    source: edunexus-seed
+    retrieved_at: "2026-09-15"
+    confirmed_by: null

@@ -1,0 +1,29 @@
+name: verify
+
+# The same command a contributor runs. A clone holds no workspace, so
+# verify:generated checks containment and says it found no workspace to
+# re-validate.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # 22 is the floor package.json's engines.node states; 24 is the
+        # newer long-term-support line.
+        node-version: [22, 24]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+      - run: npm ci
+      - run: npm run verify

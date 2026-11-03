@@ -1,0 +1,17 @@
+{
+  "_comment": "Negative and positive cases for the runtime containment rule, checked by scripts/verify/generated.js. They live here rather than inside that script because each `refused` entry is a path that must never resolve, and verify:layout's source scan would read the same strings sitting in a .js file as the violations they are written to imitate. A fixture belongs in examples/; this one had to be. `examples/containment-link-outside` is a committed link to /dev/null: a path that sits inside the tree as written and outside it once the link is followed, which is how a link would hand a guard a file outside the repository.",
+  "refused": [
+    "../admissions-scout-dev/programs/institutions.seed.yml",
+    "../../../etc/passwd",
+    "/etc/passwd",
+    "/Users/someone/notes.yml",
+    "../..",
+    "applicants/../../outside.yml",
+    "examples/containment-link-outside"
+  ],
+  "admitted": [
+    "registry/institutions.seed.yml",
+    "./config.example.yml",
+    "applicants/../modes/_shared.md"
+  ]
+}

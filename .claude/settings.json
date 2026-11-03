@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node scripts/cli/doctor.js:*)",
+      "Bash(node scripts/cli/validate.js:*)",
+      "Bash(node scripts/cli/gate.js:*)"
+    ]
+  }
+}

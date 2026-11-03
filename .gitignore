@@ -1,0 +1,51 @@
+# Dependencies and package-manager output
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Local agent/tool caches
+.codex/
+
+# Your own Claude Code permissions, such as allowing WebFetch for a list run.
+# The committed .claude/settings.json allows only the three offline guards.
+.claude/settings.local.json
+
+# User layer: never committed, from any checkout.
+#
+# This is not a convention here, it is the reason a clone can hold the data
+# at all. An applicant's workspace under applicants/ holds their own real
+# profile and project, and fellowships/ holds a real fellowship's rules. No
+# workspace ships with this repository, so none is whitelisted: only the flat
+# *.example.* templates are tracked.
+/config.yml
+/applicants/*
+!/applicants/*.example.yml
+!/applicants/*.example.md
+/fellowships/*
+!/fellowships/*.example.yml
+
+# The registries. The institution seed, registry/institutions.seed.yml, is
+# tracked and refreshed by the maintainer; its local half is not.
+#
+# registry/researchers.yml is the facts layer: personal data about named people
+# who did not agree to be catalogued. It is never committed, there is no seed
+# half of it, and there never will be. See AGENTS.md -> Personal Data.
+/registry/institutions.yml
+/registry/researchers.yml

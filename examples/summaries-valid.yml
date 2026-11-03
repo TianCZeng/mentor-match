@@ -1,0 +1,41 @@
+# Fixture: the machine record of examples/summaries-valid.md. Every person,
+# institution and page here is invented. It joins examples/pool-valid.yml and
+# examples/researchers-valid.yml.
+kind: summaries
+schema_version: 1
+applicant_id: example-applicant
+date: '2026-09-24'
+inputs:
+  pool: examples/pool-valid.yml
+  researchers: examples/researchers-valid.yml
+  brief: examples/brief-valid.md
+  profile: examples/profile-valid.yml
+publication_window_years: 5
+budget:
+  web_searches: {used: 0, cap: 20}
+  page_opens: {used: 2, cap: 120}
+  bibliographic_fetches: {used: 6, cap: 60}
+summaries:
+  - researcher_key: example-institute-mira-ostrander
+    name: Mira Ostrander
+    institution: Example Institute
+    unit: Department of Computation
+    cites:
+      - field: role_title
+      - field: research_statement
+      - identifier: doi:10.5555/example.2025.001
+    gaps:
+      - The page states nothing about taking a fellow.
+  - researcher_key: example-institute-tomas-reyna
+    name: Tomas Reyna
+    institution: Example Institute
+    unit: Center for Imaging and Memory
+    cites:
+      - field: research_statement
+      - accepted: Repetition and spacing in human visual cortex
+      - field: availability
+    gaps: []
+carried:
+  - example-university-li-ming
+gaps:
+  - example-university-li-ming was not summarised; the next run starts there.

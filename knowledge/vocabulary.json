@@ -1,0 +1,149 @@
+{
+  "_comment": "The controlled vocabularies the validate guard checks. scripts/lib/schema.js reads this file and never restates a list in code, so a value is added here and nowhere else. verify:knowledge asserts the fixed ones.",
+  "_note": "Most of these lists a document fixes: AGENTS.md's host_requirement table, its two judgement axes and their evidence bases, its three availability values, the closed constraint-flag list, the three gate verdicts, and the institution row sources. The list-run vocabularies under pool name what a list run meets. linked in recommendation.evidence_basis is the tier AGENTS.md -> Sources and Trust names for a lab or personal site an official page links to, and institution_move covers a move a page announces as well as one made.",
+  "source_version": "2026-09-25",
+  "fellowship": {
+    "host_requirement": [
+      "required",
+      "optional",
+      "none"
+    ]
+  },
+  "_publications_note": "publications.status is one list read by two layers. The applicant's own profile and a host candidate's registry row use the same three values, and an entry may carry no identifier only when status is accepted, because a venue can accept a paper months before it issues a record for it. What differs is the evidence, not the vocabulary: in the profile the applicant is self-reporting their own work and owns the claim, while a registry row is the tool asserting something about a stranger, so an accepted entry there carries the official page that says so with its retrieval date, in place of the identifier. What is banned in both is an acceptance the agent inferred rather than read.",
+  "publications": {
+    "status": [
+      "published",
+      "preprint",
+      "accepted"
+    ]
+  },
+  "researchers": {
+    "availability": [
+      "stated_open",
+      "stated_closed",
+      "unknown"
+    ]
+  },
+  "_pool_note": "The run record's closed values. not_opened_budget is the carry-forward the contract requires. found_at says which host candidate source named a person. source_outcome is what happened to a published list or a unit page. status separates a host candidate with a registry row from one named with none; unconfirmed_reason says why there is none. rests_on is what a discard's reason stands on: the list line, the person's own page, or a host rule. It has no availability value on purpose, because unknown never removes anyone and stated_closed is a flag.",
+  "pool": {
+    "found_at": [
+      "host_list",
+      "unit",
+      "single_url"
+    ],
+    "source_outcome": [
+      "read",
+      "page_unavailable",
+      "needs_registry_row",
+      "not_opened_budget"
+    ],
+    "status": [
+      "confirmed",
+      "unconfirmed"
+    ],
+    "unconfirmed_reason": [
+      "page_unavailable",
+      "no_statement_of_work",
+      "not_opened_budget"
+    ],
+    "rests_on": [
+      "list_line",
+      "own_page",
+      "host_rule"
+    ]
+  },
+  "recommendation": {
+    "fit": [
+      "strong",
+      "plausible",
+      "weak",
+      "unclear"
+    ],
+    "host_strength": [
+      "strong",
+      "plausible",
+      "weak",
+      "unclear"
+    ],
+    "evidence_basis": [
+      "official",
+      "linked",
+      "bibliographic",
+      "inferred"
+    ],
+    "constraint_flags": [
+      "host_country_rule",
+      "mobility_rule",
+      "career_stage",
+      "unit_not_eligible",
+      "no_recent_senior_authorship",
+      "availability_stated_closed",
+      "language_of_work",
+      "no_published_contact_route",
+      "institution_move"
+    ],
+    "status": [
+      "kept",
+      "dropped",
+      "undecided"
+    ]
+  },
+  "institutions": {
+    "source": [
+      "edunexus-seed",
+      "maintainer-run",
+      "discovered"
+    ]
+  },
+  "gate": {
+    "verdicts": [
+      "official",
+      "needs_registry_row",
+      "blocked"
+    ]
+  },
+  "_banned_phrases_note": "The claim is banned, not the word. `impact`, `citation`, `index`, `prestige`, `likely` and `top` are ordinary vocabulary for this reader -- an h-index carries its source and date and is a fact, a citation count is a fact, `top-down` is a modelling term -- so every phrase here names a person, an application, or a journal-level claim explicitly. Two things are banned: an unsourced reputation claim and any inference about whether a person is available or would accept. A metric with no source, and a metric used as a reason for a fit value, are schema rules rather than phrases, because no wording distinguishes them. Matched case-insensitively on word boundaries against the keys each kind writes in the tool's own words (VOICE_KEYS in scripts/lib/schema.js) and never against a field copied from a page: a verbatim quote, a published list's title and a fellowship's own name are the page's words, and a guard that rejected those would force the agent to paraphrase a source, which AGENTS.md principle 7 forbids.",
+  "banned_phrases": [
+    "top lab",
+    "top labs",
+    "top group",
+    "top-tier lab",
+    "world-leading",
+    "world leading",
+    "world-class",
+    "world class",
+    "leading figure",
+    "leading figures",
+    "leading expert",
+    "leading experts",
+    "star researcher",
+    "superstar",
+    "prestigious",
+    "impact factor",
+    "likely to accept",
+    "unlikely to accept",
+    "likely to say yes",
+    "likely to be interested",
+    "would be interested in hosting",
+    "probably has space",
+    "likely has space",
+    "probably recruiting",
+    "likely recruiting",
+    "likely hiring",
+    "may be recruiting",
+    "might be recruiting",
+    "seems to be recruiting",
+    "appears to be recruiting",
+    "approachable",
+    "worth a try",
+    "chance of acceptance",
+    "chances of acceptance",
+    "chance of being hosted",
+    "chance they say yes",
+    "chances they say yes",
+    "odds of acceptance",
+    "probability of acceptance",
+    "probability they will accept",
+    "likelihood of acceptance"
+  ]
+}

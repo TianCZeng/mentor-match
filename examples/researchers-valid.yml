@@ -1,0 +1,84 @@
+# Fixture. Every person, institution and page here is invented, and every URL
+# and address sits under an example.* host, which verify:validate asserts: a
+# real person cannot be pasted into this file without failing the build.
+#
+# The three rows cover the three shapes a real row takes. The first is read
+# from the institution's own page alone. The second takes its research
+# statement, a stated opening, a contact address and an accepted paper from
+# the lab's own site, which the official page links to. The third keeps
+# a name, a unit and a role title in the script the page published them in,
+# which the English-script sweep must not refuse.
+researchers:
+  - researcher_key: example-institute-mira-ostrander
+    name: Mira Ostrander
+    institution: Example Institute
+    unit: Department of Computation
+    role_title: Associate Professor of Computation
+    official_url: https://www.example.edu/people/mira-ostrander
+    retrieved_at: '2026-09-23'
+    research_statement:
+      quote: The group builds models of how people learn from sequences of experience.
+      source_url: https://www.example.edu/people/mira-ostrander
+      retrieved_at: '2026-09-23'
+    contact:
+      email: mira.ostrander@example.edu
+      source_url: https://www.example.edu/people/mira-ostrander
+      retrieved_at: '2026-09-23'
+    availability:
+      value: unknown
+    publications:
+      - title: Sequence effects in a model of recognition memory
+        venue: Example Journal of Cognition
+        year: '2025'
+        authorship: last
+        status: published
+        identifier: 10.5555/example.2025.001
+        retrieved_at: '2026-09-23'
+    metrics:
+      - name: h-index
+        value: 21
+        source: OpenAlex
+        retrieved_at: '2026-09-23'
+
+  - researcher_key: example-institute-tomas-reyna
+    name: Tomas Reyna
+    institution: Example Institute
+    unit: Center for Imaging and Memory
+    role_title: Assistant Professor of Psychology
+    official_url: https://www.example.edu/people/tomas-reyna
+    retrieved_at: '2026-09-23'
+    research_statement:
+      quote: We measure how the visual system changes with repeated exposure, using fMRI and behaviour.
+      source_url: https://lab.example.org/research
+      retrieved_at: '2026-09-23'
+      linked_from: https://www.example.edu/people/tomas-reyna
+    contact:
+      email: tomas.reyna@example.edu
+      source_url: https://lab.example.org/contact
+      retrieved_at: '2026-09-23'
+      linked_from: https://www.example.edu/people/tomas-reyna
+    availability:
+      value: stated_open
+      quote: The lab is looking for a postdoctoral fellow to start in 2027.
+      source_url: https://lab.example.org/join
+      retrieved_at: '2026-09-23'
+      linked_from: https://www.example.edu/people/tomas-reyna
+    publications:
+      - title: Repetition and spacing in human visual cortex
+        venue: Example Neuroscience
+        year: '2026'
+        authorship: last
+        status: accepted
+        source_url: https://lab.example.org/publications
+        retrieved_at: '2026-09-23'
+        linked_from: https://www.example.edu/people/tomas-reyna
+
+  - researcher_key: example-university-li-ming
+    name: 李明
+    institution: Example University
+    unit: 计算神经科学实验室
+    role_title: 副教授
+    official_url: https://www.example.edu.sg/people/li-ming
+    retrieved_at: '2026-09-23'
+    availability:
+      value: unknown

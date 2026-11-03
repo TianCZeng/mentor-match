@@ -1,0 +1,77 @@
+# Example only. A fictional applicant. Copy the shape, not the content.
+# `brief` writes a real profile to applicants/{applicant-id}/profile.yml
+# (gitignored), validates it, and points you to it.
+#
+# This is the applicant's own record, and it serves every fellowship they apply
+# to: each fellowship's rules are its record under fellowships/, and the project
+# is the brief in that fellowship's folder. It holds no facts about anyone else:
+# a host candidate lives in registry/researchers.yml under the closed field set
+# in AGENTS.md, and never here.
+
+# Required. These three are all `list` needs to start. `brief` drafts the
+# career stage from the question or a CV where the applicant does not say it.
+applicant_id: example-applicant
+field: computational neuroscience
+career_stage: final-year PhD
+
+# Optional from here down. A field left out costs something later, and
+# `validate profile` notes what: a constraint flag `recommend` cannot raise, or
+# a summary that cannot say what touches the applicant's own papers. The
+# reports' Gaps say the same. `brief` takes these from a CV or a proposal the
+# applicant names, and does not ask for them one by one.
+current_position: PhD candidate, Department of Example Studies
+current_institution: Example State University
+country_of_work: Examplestan
+
+degrees:
+  - degree: PhD
+    subject: Computational Neuroscience
+    institution: Example State University
+    status: in progress
+    expected: '2027'
+  - degree: BSc
+    subject: Physics
+    institution: Example State University
+    status: awarded
+    awarded: '2021'
+
+# The applicant's own publications, as they would list them. Identifiers are
+# carried here for the same reason they are required of a host candidate's: a claim
+# about what someone published cites the record it came from.
+#
+# `status` is `published`, `preprint` or `accepted`. Only `accepted` may leave
+# `identifier` out, because a venue can accept a paper months before it issues a
+# record for it -- and `validate` notes every such entry, because nothing may
+# cite it until the record exists. That relaxation is this file only: a
+# host candidate's unpublished acceptance is a claim no page can support.
+publications:
+  - title: An example model of an example circuit
+    venue: Journal of Example Results
+    year: '2025'
+    authorship: first
+    status: published
+    identifier: 10.0000/example.2025.00001
+  - title: A second example, in review
+    venue: arXiv
+    year: '2026'
+    authorship: first
+    status: preprint
+    identifier: arXiv:2601.00001
+  - title: A third example, accepted and not yet published
+    venue: Journal of Example Results
+    year: '2026'
+    authorship: first
+    status: accepted
+
+methods:
+  - spiking network models
+  - electrophysiology analysis
+
+# Anything that narrows which hosts are worth writing to. These become
+# constraint flags in a recommendation rather than filters that silently remove
+# a host candidate.
+constraints:
+  earliest_start: '2027-09'
+  languages_of_work:
+    - English
+  mobility_notes: Cannot relocate before the PhD is awarded.

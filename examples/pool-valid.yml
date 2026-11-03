@@ -1,0 +1,104 @@
+# Fixture: the machine record of examples/pool-valid.md. Every person,
+# institution and page here is invented, and every URL sits under an example.*
+# host, which verify:validate asserts. It joins examples/fellowship-valid.yml and
+# examples/researchers-valid.yml.
+kind: pool
+schema_version: 1
+applicant_id: example-applicant
+date: '2026-09-23'
+inputs:
+  fellowship: examples/fellowship-valid.yml
+  profile: examples/profile-valid.yml
+  brief: examples/brief-valid.md
+  researchers: examples/researchers-valid.yml
+  prior_pools: []
+budget:
+  web_searches: {used: 3, cap: 20}
+  page_opens: {used: 10, cap: 10}
+  host_candidates_carried: 1
+host_lists:
+  - name: Institute Faculty
+    read_url: https://www.example.edu/wp-json/wp/v2/people?role=faculty
+    retrieved_at: '2026-09-23'
+    outcome: read
+    entries: 4
+units:
+  - unit: Center for Imaging and Memory
+    institution: Example Institute
+    host_rule: Proposed mentors may be members of the Institute faculty or faculty across the university whose research addresses learning and memory.
+    why: The subject rule admits faculty beyond the list, and the brief needs human fMRI of repeated exposure, which this centre runs.
+    official_url: https://www.example.edu/imaging-memory/people
+    retrieved_at: '2026-09-23'
+    outcome: read
+  - unit: Department of Vision Science
+    institution: Example Institute
+    host_rule: Proposed mentors may be members of the Institute faculty or faculty across the university whose research addresses learning and memory.
+    why: The brief asks what repeated exposure changes in visual recognition.
+    official_url: https://www.example.edu/vision/people
+    retrieved_at: '2026-09-23'
+    outcome: not_opened_budget
+host_candidates:
+  - researcher_key: example-institute-mira-ostrander
+    name: Mira Ostrander
+    institution: Example Institute
+    unit: Department of Computation
+    found_at: host_list
+    source: Institute Faculty
+    status: confirmed
+    kept_because: The page states the group models how people learn from sequences of experience, the brief's first need.
+    scope_notes: []
+  - researcher_key: example-institute-tomas-reyna
+    name: Tomas Reyna
+    institution: Example Institute
+    unit: Center for Imaging and Memory
+    found_at: unit
+    source: Center for Imaging and Memory
+    status: confirmed
+    kept_because: The lab states it measures how the visual system changes with repeated exposure using fMRI and behaviour, the brief's second need.
+    scope_notes:
+      - Every fact beyond the name, role and unit came from the lab's own site.
+  - researcher_key: example-university-li-ming
+    name: 李明
+    institution: Example University
+    unit: 计算神经科学实验室
+    found_at: single_url
+    source: https://www.example.edu.sg/people/li-ming
+    status: confirmed
+    kept_because: Added by the applicant from the person's own page.
+    scope_notes: []
+  - researcher_key: null
+    name: Ines Varga
+    institution: Example Institute
+    found_at: host_list
+    source: Institute Faculty
+    status: unconfirmed
+    unconfirmed_reason: page_unavailable
+    note: The page returned an error and no other official page for the person was found.
+    page_url: https://www.example.edu/people/ines-varga
+  - researcher_key: null
+    name: Oren Fald
+    institution: Example Institute
+    found_at: host_list
+    source: Institute Faculty
+    status: unconfirmed
+    unconfirmed_reason: not_opened_budget
+    note: The page-open cap was reached before this page.
+    page_url: https://www.example.edu/people/oren-fald
+discarded:
+  - name: Jonas Pell
+    found_at: host_list
+    source: Institute Faculty
+    rests_on: list_line
+    reason: The list gives the role as Professor of Materials Chemistry, which is not one of the brief's needs.
+    page_url: https://www.example.edu/people/faculty
+  - name: Petra Lund
+    found_at: unit
+    source: Center for Imaging and Memory
+    rests_on: own_page
+    reason: The lab's site states it studies protein folding in yeast, which is not one of the brief's needs.
+    page_url: https://lundlab.example.org/research
+    linked_from: https://www.example.edu/imaging-memory/people/petra-lund
+gaps:
+  - Ines Varga's page returned an error.
+  - The Department of Vision Science was not opened; the page-open cap was reached.
+  - Only Tomas Reyna's lab site states whether a fellow is being taken.

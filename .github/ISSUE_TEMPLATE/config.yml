@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security report or exposed personal data (private)
+    url: https://github.com/TianCZeng/mentor-match/security/advisories/new
+    about: Report a vulnerability or personal data published by mistake privately. Never post a real person's data in a public issue; see SECURITY.md.

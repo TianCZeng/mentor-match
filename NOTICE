@@ -1,0 +1,44 @@
+mentor-match
+Copyright (c) 2026 Tianchu Zeng
+
+This project is licensed under the MIT License (see LICENSE).
+
+The official-domain gate under `scripts/` and the institution identity rows in
+`registry/institutions.seed.yml` are derived selectively from EduNexus,
+Copyright (c) 2026 Tianchu Zeng, licensed under the Apache License,
+Version 2.0, by way of admissions-scout (MIT, same author). Neither project is
+public. Nothing is imported as a package from any project; each item is ported
+as data or as a small rule with the source's own test cases as the oracle.
+
+Ported from EduNexus (Apache-2.0; not public, same author), by way of
+admissions-scout:
+
+  - Official-domain gate: `scripts/lib/gate.js`, exposed by
+    `scripts/cli/gate.js`: the HTTPS requirement, the aggregator blocklist, the
+    dot-boundary parent-suffix match, the academic domain-ending rules, the
+    bare-public-suffix rule, and the PUBLIC_HOST_SUFFIXES set. EduNexus's own
+    test cases are copied into `scripts/verify/gate.js` and
+    `scripts/verify/knowledge.js`, and pass. Ported 2026-09-22.
+
+  - Institution registry seed: `registry/institutions.seed.yml`, the 67 rows
+    labelled `edunexus-seed`, merged from EduNexus's ROR identity data and its
+    university domain list. Ported whole, 2026-09-22.
+
+Ported from admissions-scout (MIT; not public, same author):
+
+  - The deterministic floor: `scripts/lib/{args,yaml,language,workspace,
+    registry,schema}.js` and `scripts/cli/{doctor,validate,gate}.js`, ported
+    2026-09-22 with this repository's own schemas, paths and vocabulary.
+    `scripts/lib/language.js` takes its idea and shape from admissions-ops
+    (MIT, same author, https://github.com/TianCZeng/admissions-ops), not from
+    EduNexus.
+
+Built from other sources:
+
+  - `registry/institutions.seed.yml`, 41 of its 108 rows, labelled
+    `maintainer-run`, plus one domain added to the Southampton row: 5
+    Netherlands rows confirmed on a real run, and 36 rows across Belgium,
+    Denmark, Finland, France, Germany, the Netherlands, Sweden and Switzerland
+    built from the Research Organization Registry (https://ror.org), which
+    releases its data under CC0 1.0 and asks for no attribution. Named here
+    because the rows are derived from it.

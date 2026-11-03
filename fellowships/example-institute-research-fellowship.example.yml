@@ -1,0 +1,70 @@
+# Example only. Fictional throughout: no such institute, no such fellowship.
+# `brief` writes a real one to fellowships/{fellowship-id}.yml (gitignored),
+# validates it, and points you to it. The file is named for the id it carries,
+# which is the rule `validate fellowship` enforces on every record under
+# fellowships/; this template keeps the rule and adds `.example` to it.
+#
+# It is the same fellowship the sample reports in examples/ were written
+# against, so a reader can follow one record from its rules to a
+# recommendation.
+#
+# Each host rule carries two fields rather than one: `rule` is what the rule
+# means for this applicant in plain words, and `quote` is the page's own words.
+# A paraphrase is checkable only against the quote beside it, and whoever reads
+# this record against the fellowship's pages is then comparing rather than
+# searching.
+
+fellowship_id: example-institute-research-fellowship
+name: Example Institute Research Fellowship
+host_institution: Example Institute
+official_url: https://www.example.edu/fellowships/research-fellowship
+retrieved_at: '2026-09-22'
+
+# `required`, `optional` or `none`, read off the fellowship's own pages and
+# never assumed. `required` and `optional` both run the whole pipeline: a
+# programme that lets you choose a mentor needs the same three answers as one
+# that will not accept an application without a signature. Only `none` -- no
+# mentor or host component at all -- stops at `brief`, because there is then
+# nobody to look for, and a record with `none` carries no host fields at all.
+host_requirement: optional
+
+# What the fellowship calls the relationship, in its own words -- mentor, host,
+# sponsor, supervisor, affiliation. Recorded as the page writes it and used in
+# the reports.
+host_relationship_term: mentor
+
+# Present only where the fellowship publishes a list of eligible hosts. Omit the
+# key entirely where it publishes none.
+#
+# `bounds_pool` is there because a published list is *not* automatically the
+# pool: a fellowship can publish a list of its own faculty and also allow
+# mentors from outside it, as this one does, and then a run that reads the list
+# and stops has missed everyone in the other branch. True means the host rules
+# make this list the whole of who may host; false means it is one branch among
+# others, and then `note` says which rule leaves people off it.
+host_lists:
+  - name: Institute Faculty
+    official_url: https://www.example.edu/people/faculty
+    retrieved_at: '2026-09-22'
+    bounds_pool: false
+    note: >-
+      The eligibility rule also admits faculty elsewhere in the university who
+      work on the named subjects, and none of those appear on this list.
+
+# One entry per rule the fellowship publishes about who may host. Each carries
+# its own source, because a fellowship states its rules across several pages and
+# a rule with no page behind it is not recorded. The field set is closed:
+# rule, quote, official_url, retrieved_at.
+host_rules:
+  - rule: The applicant names two to three proposed mentors in the application.
+    quote: Candidates will be asked to provide the names of two to three proposed mentors.
+    official_url: https://www.example.edu/fellowships/research-fellowship
+    retrieved_at: '2026-09-22'
+  - rule: No prior agreement with a proposed mentor is needed before applying.
+    quote: Candidates do not need to have established a relationship with proposed mentors in advance.
+    official_url: https://www.example.edu/fellowships/research-fellowship
+    retrieved_at: '2026-09-22'
+  - rule: A mentor is on the Institute's faculty, or works on learning and memory anywhere in the university.
+    quote: Proposed mentors may be members of the Institute faculty or faculty across the university whose research addresses learning and memory.
+    official_url: https://www.example.edu/fellowships/research-fellowship/eligibility
+    retrieved_at: '2026-09-22'

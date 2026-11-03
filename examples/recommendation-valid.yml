@@ -1,0 +1,78 @@
+# Fixture: the machine record of examples/recommendation-valid.md. Every person,
+# institution and page here is invented. It joins examples/pool-valid.yml,
+# examples/summaries-valid.yml and examples/researchers-valid.yml.
+kind: recommendation
+schema_version: 1
+applicant_id: example-applicant
+date: '2026-09-25'
+inputs:
+  pool: examples/pool-valid.yml
+  summaries: examples/summaries-valid.yml
+  researchers: examples/researchers-valid.yml
+  fellowship: examples/fellowship-valid.yml
+  brief: examples/brief-valid.md
+  profile: examples/profile-valid.yml
+budget:
+  page_opens: {used: 0, cap: 120}
+proposed:
+  - researcher_key: example-institute-mira-ostrander
+    covers: Models of learning from sequences of experience.
+  - researcher_key: example-institute-tomas-reyna
+    covers: Human fMRI of repeated exposure.
+entries:
+  - researcher_key: example-institute-mira-ostrander
+    name: Mira Ostrander
+    institution: Example Institute
+    unit: Department of Computation
+    fit:
+      value: plausible
+      evidence_basis: official
+      reasons:
+        - The group states it models learning from sequences of experience, and the 2025 last-author paper models order effects on recognition.
+      cites:
+        - field: research_statement
+        - identifier: 10.5555/example.2025.001
+    host_strength:
+      value: strong
+      evidence_basis: official
+      reasons:
+        - An associate professorship, on the fellowship's own Institute Faculty list, with a 2025 last-author paper.
+        - h-index 21 in OpenAlex, read 2026-09-23.
+      cites:
+        - field: role_title
+        - host_list: Institute Faculty
+        - identifier: 10.5555/example.2025.001
+        - field: metrics
+    constraint_flags: []
+    status: kept
+    status_reason: null
+  - researcher_key: example-institute-tomas-reyna
+    name: Tomas Reyna
+    institution: Example Institute
+    unit: Center for Imaging and Memory
+    fit:
+      value: strong
+      evidence_basis: linked
+      reasons:
+        - The lab states it measures visual change with repeated exposure using fMRI, and its accepted paper varies the spacing of repeated images.
+      cites:
+        - field: research_statement
+        - accepted: Repetition and spacing in human visual cortex
+    host_strength:
+      value: plausible
+      evidence_basis: official
+      reasons:
+        - An assistant professorship in a unit the pool read under the subject rule, with an accepted 2026 last-author paper.
+        - Eligibility rests on reading the rule's learning and memory to cover the lab's stated work on visual change with repeated exposure, which the fellowship does not settle.
+      cites:
+        - field: role_title
+        - field: unit
+        - field: research_statement
+        - accepted: Repetition and spacing in human visual cortex
+    constraint_flags: []
+    status: undecided
+    status_reason: null
+carried:
+  - example-university-li-ming
+gaps:
+  - No page read states published funding or a record of hosting fellows for either host candidate.

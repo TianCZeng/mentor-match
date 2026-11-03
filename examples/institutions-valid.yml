@@ -1,0 +1,9 @@
+institutions:
+  - name: "Riverton College"
+    country: "Examplestan"
+    aliases: ["河流学院"]
+    official_domains: ["riverton-college.example.org"]
+    ror_id: null
+    source: discovered
+    retrieved_at: "2026-09-22"
+    confirmed_by: applicant

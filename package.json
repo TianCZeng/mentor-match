@@ -1,0 +1,36 @@
+{
+  "name": "mentor-match",
+  "version": "0.1.0",
+  "description": "Local, evidence-first companion for a fellowship that asks you to name a mentor or host, whether or not it requires their agreement first: list who could host you, summarize what each of them works on, recommend who to write to",
+  "private": true,
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TianCZeng/mentor-match.git"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "npm run verify",
+    "verify": "npm run verify:layout && npm run verify:yaml && npm run verify:knowledge && npm run verify:gate && npm run verify:validate && npm run verify:generated",
+    "verify:layout": "node scripts/verify/layout.js",
+    "verify:yaml": "node scripts/verify/yaml.js",
+    "verify:knowledge": "node scripts/verify/knowledge.js",
+    "verify:gate": "node scripts/verify/gate.js",
+    "verify:validate": "node scripts/verify/validate.js",
+    "verify:generated": "node scripts/verify/generated.js"
+  },
+  "keywords": [
+    "fellowship",
+    "postdoc",
+    "host-supervisor",
+    "research-fit",
+    "local-first",
+    "agent-skills"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^4.1.1"
+  }
+}
