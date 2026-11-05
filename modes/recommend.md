@@ -17,7 +17,7 @@ The applicant sees both and keeps or drops each one. Nothing here says who will 
 
 - the latest pool and latest summaries report in the fellowship's folder, each read from its machine record under `applicants/{applicant-id}/{fellowship-id}/machine/`; the summaries record must name that pool's record;
 - `registry/researchers.yml`, for the rows they name;
-- `fellowships/{fellowship-id}.yml`, the record the folder is named for: the host rules `host_strength` is read against, and the number of names the fellowship asks for;
+- `fellowships/{fellowship-id}.yml`, the record the folder is named for: the host rules `host_strength` is read against, how many names the fellowship asks for, and whether they all take the role or one of them becomes the host;
 - the folder's `brief.md` and `applicants/{applicant-id}/profile.yml`: the question, the needs the brief says a mentor must cover, whether the agent drafted them, and the constraints. A flag rests on a profile field — country of work, degrees, current institution, `languages_of_work` — that the profile may lack; where it does, the report's Gaps say which flag could not be raised;
 - `config.yml`: the page-open cap, or `config.example.yml`'s. Say which was read.
 
@@ -67,7 +67,7 @@ Cited-work metrics are shown with their source and date, and never decide the va
 
 **`evidence_basis`**: the tier the call rests on most (`AGENTS.md` → Sources and Trust). `bibliographic` when a paper or a metric makes the call, `official` or `linked` when the group's own statement or a fact read from its page does, and `inferred` when the call needs general knowledge that nothing it cites carries. Linked is its own tier: a statement from a lab's site that an official page links to is `linked`, not `official`. The guard holds every basis but `inferred` to a cite of its tier. `inferred` is always visible as such, and is never `strong`.
 
-**`availability` is neither a reason nor a flag, unless it is `stated_closed`.** A stated opening is a fact the report shows beside the entry. If `stated_open` could raise a call, `unknown`, the normal case, would lower one. `stated_closed` is the flag `availability_stated_closed`.
+**`availability` is neither a reason nor a flag, unless it is `stated_closed`.** A stated opening is a fact the report shows beside the entry. If `stated_open` could raise a call, `unknown`, the normal case, would lower one. `stated_closed` is the flag `availability_stated_closed`. A row holds one statement, which an earlier run for another fellowship may have read: where its quote names a role other than the one this application is for, the report says so beside the flag.
 
 **`host_requirement: optional`** changes the report's wording, not the rubric: the report says that the fellowship names a mentor without requiring an agreement, and `host_strength` is read against whatever rules the fellowship publishes (`AGENTS.md` → What this project is).
 
@@ -89,7 +89,12 @@ A flag is a fact for the applicant to weigh, not a removal and not a reason on e
 
 ## The proposed set
 
-The fellowship says how many names it asks for, such as two to three. Propose one set of that size, chosen so that between them its members cover the needs the brief names, each with the need it covers. Prefer members whose `fit` meets the need they cover and whose `host_strength` is not in doubt, and say why each is in and what the flags on the others would need. The set has no order and no score. The at-a-glance table names, for every entry, the need its `fit` meets, so a swap is one row away. The proposal is the agent's; the keep and drop are the applicant's.
+Read from the fellowship's own pages how many names it asks for, and what the named people become.
+
+- **A team.** Everyone named takes the role together: two or three mentors, a committee. Choose the set so that between them its members cover the needs the brief names, each with the need it covers.
+- **Alternatives.** One person becomes the host, such as a PhD supervisor, and the others are who else the applicant writes to or lists as faculty of interest. Each member then has to host the project alone, so choose members whose `fit` meets the question itself, and give each one's `covers` as the needs it meets.
+
+Propose one set of the size the fellowship asks for. Where its pages name no number, the size is the agent's: say that the pages set none, and why this size. Prefer members whose `fit` meets the need they cover and whose `host_strength` is not in doubt, and say why each is in and what the flags on the others would need. The set has no order and no score. The at-a-glance table names, for every entry, the need its `fit` meets, so a swap is one row away. The proposal is the agent's; the keep and drop are the applicant's.
 
 ## Output
 

@@ -8,7 +8,7 @@ The caller prepends, verbatim: the three language rules from `modes/_shared.md` 
 
 ## Input
 
-One unit as JSON: `unit`, `institution`, `official_url` (may be null), `host_rule` (the rule's quote), `why` (why the unit is on the list), the brief's mentor needs in one paragraph, the `researcher_key`s and official URLs already in the pool or the registry (read nobody twice), and the budget this worker may spend (`web_searches`, normally 1; `page_opens`, normally 6).
+One unit as JSON: `unit`, `institution`, `official_url` (may be null), `host_rule` (the rule's quote), `why` (why the unit is on the list), the brief's mentor needs in one paragraph, `role` (what the application is for, such as a fellow or a PhD student; a stated opening counts only when it names that role), the `researcher_key`s and official URLs already in the pool or the registry (read nobody twice), and the budget this worker may spend (`web_searches`, normally 1; `page_opens`, normally 6).
 
 ## Procedure
 
@@ -57,5 +57,5 @@ Omit a row field the pages do not carry rather than filling it. `null` for `link
 - Never record a fact from a page the gate did not admit, or from a search result, a directory, an aggregator or a social account.
 - Never return a field outside the row above. A page publishes more than the set — pronouns, a phone number, an office address, a family, a birthplace — and all of it stays on the page.
 - Never paraphrase a quote; "not found" is the honest value.
-- Never infer availability. `stated_open` and `stated_closed` need the page's own sentence; a lab recruiting PhD students says nothing about a fellow.
+- Never infer availability. `stated_open` and `stated_closed` need the page's own sentence, about the `role` the caller names; a lab recruiting PhD students says nothing about a fellow.
 - Never write to disk.

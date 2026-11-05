@@ -1,8 +1,12 @@
 # mentor-match
 
+[![verify](https://github.com/TianCZeng/mentor-match/actions/workflows/verify.yml/badge.svg)](https://github.com/TianCZeng/mentor-match/actions/workflows/verify.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
+**English** | [简体中文](README.zh-CN.md)
+
 Find the mentors a fellowship asks you to name.
 
-Version 0.1.0, the first public release. A file-based workflow for coding agents, with shared skills and offline Node.js checks.
+Version 0.1.1. A file-based workflow for coding agents, with shared skills and offline Node.js checks.
 
 Many fellowships and programmes put a named mentor or host between you and the application. Some will not accept an application until that person has agreed. Others publish a list of people to choose from, or expect you to write to someone before you apply, without requiring a commitment. Either way you face the same work: finding the people who could host your project, reading what each of them works on now, and deciding who to write to and why. There is no tool for it.
 
@@ -175,5 +179,3 @@ Not built yet, in no set order and with no date, each waiting on real use:
 ## Reading order
 
 [`AGENTS.md`](AGENTS.md) is the policy, written for the agent that runs the tool. As a person, read its **Personal Data**, **Sources and Trust** and **The Two Judgement Axes**. [`DATA_CONTRACT.md`](DATA_CONTRACT.md) says what lives where, and what each of the four layers never holds. [`modes/`](modes/) holds one contract per mode. Changes: [`CHANGELOG.md`](CHANGELOG.md). Contributions: [`CONTRIBUTING.md`](CONTRIBUTING.md). Security problems, and personal data exposed by accident, are reported privately: [`SECURITY.md`](SECURITY.md). Licence: [MIT](LICENSE).
-
-中文说明见 [`README.zh-CN.md`](README.zh-CN.md)。

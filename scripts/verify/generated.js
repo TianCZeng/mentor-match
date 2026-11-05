@@ -39,15 +39,24 @@ function main() {
 
   let files = registryFiles;
   let folders = 0;
+  const notStarted = [];
   for (const applicantId of applicants) {
     const paths = workspacePaths(applicantId);
+    const fellowships = listFellowships(applicantId);
+    // `brief` tells the applicant to put a CV in their folder before it runs,
+    // and writes the profile before any fellowship folder. A folder holding
+    // only what the applicant put there has nothing generated to check, so it
+    // is named and skipped; one with an application and no profile still fails.
+    if (!fs.existsSync(paths.profilePath) && fellowships.length === 0) {
+      notStarted.push(`applicants/${applicantId}/`);
+      continue;
+    }
     assert(fs.existsSync(paths.profilePath), `applicants/${applicantId}/ has no profile.yml`);
     files += check("profile", paths.profilePath, applicantId);
 
     const report = runDoctor({ applicant: applicantId });
     assert(report.applicant === applicantId, `doctor did not select ${applicantId}`);
     assert(report.profile === `applicants/${applicantId}/profile.yml`, `doctor did not find applicants/${applicantId}/profile.yml`);
-    const fellowships = listFellowships(applicantId);
     assert(JSON.stringify(report.applications.map((entry) => entry.fellowship_id)) === JSON.stringify(fellowships),
       `doctor reports applications ${report.applications.map((entry) => entry.fellowship_id).join(", ")} for applicants/${applicantId}/, which holds ${fellowships.join(", ")}`);
 
@@ -91,7 +100,8 @@ function main() {
     assert(typeof report.next_step_reason === "string" && report.next_step_reason !== "", `doctor gave ${applicantId} no next-step reason`);
   }
 
-  console.log(`Generated workspaces verify: ${contained} containment checks, ${applicants.length} workspace(s), ${folders} fellowship folder(s), ${files} file(s) re-validated, doctor agrees`);
+  const skipped = notStarted.length === 0 ? "" : `; ${notStarted.join(", ")} skipped: no profile and no application yet, so brief has not run there`;
+  console.log(`Generated workspaces verify: ${contained} containment checks, ${applicants.length - notStarted.length} workspace(s), ${folders} fellowship folder(s), ${files} file(s) re-validated, doctor agrees${skipped}`);
 }
 
 // No id may escape its directory, and no path a command is handed may escape

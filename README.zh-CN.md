@@ -1,8 +1,12 @@
 # mentor-match
 
+[![verify](https://github.com/TianCZeng/mentor-match/actions/workflows/verify.yml/badge.svg)](https://github.com/TianCZeng/mentor-match/actions/workflows/verify.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
+[English](README.md) | **简体中文**
+
 找到 fellowship 要你提名的导师。
 
-版本 0.1.0，第一个公开版本。供编程 agent 使用的文件工作流，共享 skill 和离线 Node.js 检查。
+版本 0.1.1。供编程 agent 使用的文件工作流，共享 skill 和离线 Node.js 检查。
 
 很多 fellowship 和项目都在你和申请之间放了一位明确的导师或 host。有的在那个人答应之前根本不受理申请；有的公布一份名单让你自己挑，或者希望你先写信联系，但并不要求对方先做出承诺。无论是哪一种，你要做的事情都一样：找出哪些人可能接收你的课题，读懂每个人现在在做什么，再决定写信给谁、为什么。这件事没有现成的工具。
 
@@ -174,5 +178,3 @@ npm run verify    # 可选：离线检查这个 clone
 ## 阅读顺序
 
 [`AGENTS.md`](AGENTS.md) 是策略，写给运行这个工具的 agent 看。作为读者，请读其中的 **Personal Data**、**Sources and Trust** 和 **The Two Judgement Axes** 三节。 [`DATA_CONTRACT.md`](DATA_CONTRACT.md) 说明什么放在哪里，以及四层各自绝不存放什么。 [`modes/`](modes/) 每个模式一份契约。版本变化见 [`CHANGELOG.md`](CHANGELOG.md)。参与贡献见 [`CONTRIBUTING.md`](CONTRIBUTING.md)。安全问题，以及个人数据的意外泄露，请私下报告，见 [`SECURITY.md`](SECURITY.md)。许可证：[MIT](LICENSE)。
-
-English: [`README.md`](README.md)。

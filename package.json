@@ -1,6 +1,6 @@
 {
   "name": "mentor-match",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Local, evidence-first companion for a fellowship that asks you to name a mentor or host, whether or not it requires their agreement first: list who could host you, summarize what each of them works on, recommend who to write to",
   "private": true,
   "type": "commonjs",
